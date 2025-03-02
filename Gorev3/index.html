@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Art Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /*background-color: #f8f9fa;  Arka plan rengi */
+            background-image: url('https://assets.weforum.org/article/image/responsive_big_webp_M6WwUWq0RPC7_MW5n6s81wgynwMAkV1RKeJfawkhDDo.webp'); /* Uzay görselinin URL'si */
+            background-size: cover; /* Görselin sayfayý kaplamasýný saðlar */
+            background-position: center; /* Görselin ortalanmasýný saðlar */
+            background-repeat: no-repeat; /* Görselin tekrarlanmamasýný saðlar */
+        }
+
+        .gallery-image {
+            height: 600px; /* Resim yüksekliðini 400px olarak ayarlayýn */
+            width: 600px; /* Resim geniþliðini 400px olarak ayarlayýn */
+            object-fit: cover; /* Resimlerin kesilmeden sýðmasýný saðlar */
+            transition: transform 0.3s; /* Geçiþ efekti */
+            border-radius: 8px; /* Kenar yuvarlama */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+        }
+
+            .gallery-image:hover {
+                transform: scale(1.05); /* Hover efekti */
+            }
+
+        .gallery-item {
+            padding: 0; /* Resimlerin etrafýndaki boþluklarý kaldýr */
+            margin-bottom: 10px; /* Alt boþluk */
+            display: flex; /* Flexbox ile ortalama */
+            justify-content: center; /* Ortala */
+        }
+
+        .modal-content {
+            border-radius: 8px; /* Modal kenar yuvarlama */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="C:\Users\caner\Desktop\BE126Git\Gorev3\images\imag.webp" alt="Logo" width="30" height="24"> Space Art Gallery
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.nasa.gov" target="_blank" >NASA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.spacex.com/" target="_blank">SpaceX</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-secondary border">
+        <div class="row">
+            <div class="col-md-4 gallery-item">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cosmic-cloud">
+                    <div class="position-relative">
+                        <img src="C:\Users\caner\Desktop\BE126Git\Gorev3\images\hubble-kozmik-bulut.webp" class="gallery-image" alt="Kozmik Bulut" />
+                        <span class="position-absolute bottom-0 end-0 text-white bg-dark px-2 py-1">Kozmik Bulut</span>
+                    </div>
+                </button>
+
+                <div class="modal fade" id="cosmic-cloud" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cosmic-cloud-Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="cosmic-cloud-Label">Kozmik Bulut</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Evren tozlu bir yerdir, NASA/ESA Hubble Uzay Teleskobu'nun Tarantula Bulutsusu'nun yakininda dönen gaz ve toz bulutlarini gösteren bu görüntüsü bunu ortaya koyuyor. Dorado ve Mensa takýmyildizlarinda yaklasik 160.000 isik yili uzakliktaki Büyük Macellan Bulutu'nda bulunan Tarantula Bulutsusu, yakin evrendeki en üretken yildiz olusum bölgesidir ve bilinen en büyük yildizlara ev sahipligi yapmaktadir.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button onclick="Web('https://www.nasa.gov/image-article/hubble-captures-a-cosmic-cloudscape/')" type="button" class="btn btn-primary">Bilgi için basiniz!!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 gallery-item">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rainbow-colored-feather">
+                    <div class="position-relative">
+                        <img src="C:\Users\caner\Desktop\BE126Git\Gorev3\images\rainbow-colored-feather.webp" class="gallery-image" alt="Gokkusagi Renginde Bir Tuy" />
+                        <span class="position-absolute bottom-0 end-0 text-white bg-dark px-2 py-1">Gokkusagi Renginde Bir Tuy</span>
+                    </div>
+                </button>
+
+                <div class="modal fade" id="rainbow-colored-feather" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="rainbow-colored-feather-Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="rainbow-colored-feather-Label">Gokkusagi Renginde Bir Tuy</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                NASA'nin Curiosity Mars gezgini, 27 Ocak 2023'te gün batimindan hemen sonra bu tuy seklindeki yanardöner bulutu yakaladi. Yanardöner bulutlardaki renkleri incelemek, bilim insanlarina bulutlarin icindeki parcacik boyutu ve zamanla nasil büyüdükleri hakkinda bir seyler anlatýyor. Bu bulutlar, gece parlayan veya "gece parlayan" bulutlari incelemek için mevsimsel bir görüntüleme kampanyasinin parçasý olarak yakalandi. Ocak 2025'teki yeni bir kampanya, Curiosity'nin Mars gögünde sürüklenen kirmizi ve yesil tonlu bulutlarin bu videosunu çekmesine yol açti.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button onclick="Web('https://www.nasa.gov/image-article/a-rainbow-colored-feather-in-the-martian-sky/')" type="button" class="btn btn-primary">Bilgi için basiniz!!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 gallery-item">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stellar-bouquet-feather">
+                    <div class="position-relative">
+                        <img src="C:\Users\caner\Desktop\BE126Git\Gorev3\images\stellar-bouquet.webp" class="gallery-image" alt="Bir Yildiz Buketi" />
+                        <span class="position-absolute bottom-0 end-0 text-white bg-dark px-2 py-1">Bir Yildiz Buketi</span>
+                    </div>
+                </button>
+
+                <div class="modal fade" id="stellar-bouquet-feather" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="stellar-bouquet-Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="stellar-bouquet-Label">Bir Yildiz Buketi</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                12 Subat 2025'te yayinlanan bu görüntü, 30 Doradus adli muhtesem yildiz olusum bölgesinin simdiye kadar yapilmis en derin X-isin görüntüsüdür. NASA'nin Chandra X-isini Gözlemevi'nden (mavi ve yesil) alinan X-isin verileri, NASA'nin Hubble Uzay Teleskobu'ndan (sari) alinan optik veriler ve Atacama Büyük Milimetre/milimetre alti Dizisi'nden (turuncu) alinan radyo verileri birlestirildiginde, bu yildiz düzeni canlaniyor.
+                                Tarantula Bulutsusu olarak da bilinen 30 Dor, Samanyolu'na komsu kucuk bir galaksi olan Büyük Macellan Bulutu'nda yaklasik 160.000 isik yili uzaklikta yer alir. Dünyaya göre en parlak ve en kalabalik yildiz olusum bölgelerinden biri oldugu için 30 Dor, yildizlarin nasil dogdugu hakkinda daha fazla bilgi edinmeye çalisan bilim insanlari için sik sik hedef haline gelir.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button onclick="Web('https://www.nasa.gov/image-article/a-stellar-bouquet/')" type="button" class="btn btn-primary">Bilgi için basiniz!!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 gallery-item">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#milky-way-feather">
+                    <div class="position-relative">
+                        <img src="C:\Users\caner\Desktop\BE126Git\Gorev3\images\Milky-way-on-the-horizon.jpg" class="gallery-image" alt="Ufukta Samanyolu" />
+                        <span class="position-absolute bottom-0 end-0 text-white bg-dark px-2 py-1">Ufukta Samanyolu</span>
+                    </div>
+                </button>
+
+                <div class="modal fade" id="milky-way-feather" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="milky-way-Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="milky-way-Label">Ufukta Samanyolu</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                NASA astronotu Don Pettit, 29 Ocak 2025'te Dünya ufkunun ötesinde görünen Samanyolu'nun bu görüntüsünü yakalamak için düþük isik ve uzun süreli ayarlara sahip bir kamera kullandi. O sirada Uluslararasi Uzay Istasyonu, gün dogumundan hemen önce Sili kiyilarinda Pasifik Okyanusu'nun 265 mil yukarisinda yörüngedeydi.
+                                Pettit, NASA astronotlari Suni Williams, Butch Wilmore ve Nick Hague ile birlikte Expedition 72 ekibinin bir parçasidir. Yörünge sakinleri, ilac üretimi, gelismis yasam destek sistemleri, mikro yercekimi ile genetik dizileme ve daha fazlasi dahil olmak üzere Dünya'da ve disinda insanlara fayda saglamak için çesitli uzay fenomenlerini arastirmaktadir.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button onclick="Web('https://www.nasa.gov/image-article/milky-way-on-the-horizon/')" type="button" class="btn btn-primary">Bilgi için basiniz!!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 gallery-item">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#intuitive-machines-2-feather">
+                    <div class="position-relative">
+                        <img src="C:\Users\caner\Desktop\BE126Git\Gorev3\images\intuitive-machines-2-Lifts-off.webp" class="gallery-image" alt="Sezgisel Makineler" />
+                        <span class="position-absolute bottom-0 end-0 text-white bg-dark px-2 py-1">Sezgisel Makineler</span>
+                    </div>
+                </button>
+
+                <div class="modal fade" id="intuitive-machines-2-feather" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="intuitive-machines-2-Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="intuitive-machines-2-Label">Sezgisel Makineler</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Intuitive Machines'in Nova-C ay inis aracini (IM-2) tasiyan bir SpaceX Falcon 9 roketi, 26 Subat 2025 Çarsamba günü Florida'daki NASA Kennedy Uzay Merkezi'ndeki Firlatma Kompleksi 39A'dan firlatildiktan sonra yukari dogru yükseliyor. Inis aracinin 6 Mart'ta Aya inmesi planlaniyor.
+                                NASA'nin inis aracinda yapacagi bilim ve teknoloji gösterileri, Aya vardiginda gelecekteki insan görevlerini desteklemek için veri toplayacak. IM-2 göreviyle birlikte yolcu tasimaciligi olarak firlatilan NASA'nin Lunar Trailblazer uzay araci da Ay yörüngesine dogru yolculuguna basladi ve burada Aydaki farkli su formlarinin dagilimini haritalayacak.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button onclick="Web('https://www.nasa.gov/image-article/intuitive-machines-2-lifts-off/')" type="button" class="btn btn-primary">Bilgi için basiniz!!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 gallery-item">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#venus-blows-feather">
+                    <div class="position-relative">
+                        <img src="C:\Users\caner\Desktop\BE126Git\Gorev3\images\venus-blows-off-some-steam.webp" class="gallery-image" alt="Sezgisel Makineler" />
+                        <span class="position-absolute bottom-0 end-0 text-white bg-dark px-2 py-1">Venüs Buharý</span>
+                    </div>
+                </button>
+
+                <div class="modal fade" id="venus-blows-feather" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="venus-blows-Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="intuitive-machines-2-Label">Venüs Buharý</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Bu 19 Nisan 1977 tarihli sanatçý konseptinde, kayalýk Venüs yüzeyinden yükselen uzun beyaz buhar sütunlarý. Bir yýldan biraz fazla bir süre sonra, NASA'nýn Pioneer Venus 1'i, Venüs'ün atmosferini incelemek üzere tasarlanmýþ iki uzay aracý yörünge aracý-araþtýrma aracý kombinasyonunun ilki olarak fýrlatýlacaktý.
+
+                                Venüs'ün yörüngesine giren ilk Amerikan uzay aracý olan Pioneer Venus 1, Venüs'ün yüzeyini haritalamak için radar kullandý. Araþtýrma, Venüs'ün genel olarak Dünya'dan daha pürüzsüz olduðunu buldu, ancak Everest Daðý'ndan daha yüksek bir dað ve Büyük Kanyon'dan daha derin bir uçurum vardý.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button onclick="Web('https://www.nasa.gov/image-article/venus-blows-off-some-steam/')" type="button" class="btn btn-primary">Bilgi için basiniz!!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function Web(webSitesi) {
+            window.open(webSitesi, '_blank');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
